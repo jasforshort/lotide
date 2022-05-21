@@ -15,14 +15,14 @@ const assertArraysEqual = function(a, b) {
 
 const flatten = function(array1) {
   let flatArray = [];
-  let combinedArray = [];
   for (const element of array1) {
     if (Array.isArray(element)) {
-      flatArray.push(...combinedArray, ...element);
+      flatArray.push(...element);
     } else {
       flatArray.push(element);
     }
   }
+  console.log(flatArray)
   return flatArray;
 };
 
