@@ -22,7 +22,6 @@ const flatten = function(array1) {
       flatArray.push(element);
     }
   }
-  console.log(flatArray)
   return flatArray;
 };
 
