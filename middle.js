@@ -13,17 +13,18 @@ const assertArraysEqual = function(a, b) {
   test ? console.log("true") : console.log("false");
 };
 
-const middle = function(array) {
-  let midway = [];
-  if (array.length === 1 || array.length === 2) {
-    return midway;
-  } else if (array.length % 2 === 1) {
-    midway.push(array[Math.floor(array.length / 2)]);
-    return midway;
-  } else if (array.length % 2 === 0) {
-    midway.push(array[Math.floor(array.length / 2) - 1]);
-    midway.push(array[Math.floor(array.length / 2)]);
-    return midway;
+const middle = function(inputList) {
+  const middleElement = [];
+  const inputListLength = inputList.length;
+  if (inputListLength === 1 || inputListLength === 2) {
+    return middleElement;
+  } else if (inputListLength % 2 === 1) {
+    middleElement.push(inputList[Math.floor(inputListLength / 2)]);
+    return middleElement;
+  } else if (inputListLength % 2 === 0) {
+    middleElement.push(inputList[(inputListLength / 2) - 1]);
+    middleElement.push(inputList[(inputListLength / 2)]);
+    return middleElement;
   }
 };
 

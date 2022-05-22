@@ -14,7 +14,7 @@ const assertArraysEqual = function(a, b) {
 };
 
 const flatten = function(array1) {
-  let flatArray = [];
+  const flatArray = [];
   for (const element of array1) {
     if (Array.isArray(element)) {
       flatArray.push(...element);
