@@ -10,19 +10,18 @@ const countLetters = function(sentenceInput) {
   const numOfLetters = {};
   sentenceInput = sentenceInput.replace(/\s/g, '');
   for (const letter of sentenceInput) {
-    if (typeof letter === 'string' || letter instanceof String) {
-      if (!numOfLetters[letter]) {
-        numOfLetters[letter] = 1;
-      } else {
-        numOfLetters[letter]++;
-      }
+    // if (typeof letter === 'string' || letter instanceof String) {
+    if (!numOfLetters[letter]) {
+      numOfLetters[letter] = 1;
+    } else {
+      numOfLetters[letter]++;
     }
   }
   return numOfLetters;
+
 };
 
-
-const result = countLetters("lighthouse in the house") ;
+const result = countLetters("lighthouse in the house");
 
 assertEqual(result["l"], 1);
 assertEqual(result["i"], 2);
