@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -23,8 +15,7 @@ const eqObjects = function(object1, object2) {
   // If differing length, returns false
   if (arrOfObject1.length !== arrOfObject2.length) {
     return false;
-  }
-  for (const key of arrOfObject1) {
+  } for (const key of arrOfObject1) {
     // If both are arrays, test through eqArrays function, otherwise test each primitive value
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       return (eqArrays(object1[key], object2[key]));
@@ -37,21 +28,13 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect; // <= add this line
+  // console.log(`Example label: ${inspect(actual)}`);
+  const test = eqArrays(actual, expected);
+  test ? console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`) : console.log(`❌❌❌ Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+};
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-eqObjects(ab, ba); // => true
-
-const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // => false
-assertEqual(eqObjects(ab, ba), true);
-assertEqual(eqObjects(ab, abc), false);
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-eqObjects(cd, dc); // => true
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-eqObjects(cd, cd2); // => false
-assertEqual(eqObjects(cd, dc), true);
-assertEqual(eqObjects(cd, cd2), false);
+assertObjectsEqual(ab, ba);

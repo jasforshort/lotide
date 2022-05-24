@@ -8,10 +8,10 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArraysEqual = function(a, b) {
+const assertArraysEqual = function(actual, expected) {
   // using ternary operator
-  const test = eqArrays(a, b);
-  test ? console.log("true") : console.log("false");
+  const test = eqArrays(actual, expected);
+  test ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);;
   // using if else loop
   // if (eqArrays(a, b)) {
   //   console.log("The two compared arrays are equal. 😀");
