@@ -27,4 +27,6 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-assertArraysEqual(letterPositions("ice cream"), { i: [ 0 ], c: [ 1, 4 ], e: [ 2, 6 ], r: [ 5 ], a: [ 7 ], m: [ 8 ] });
+// assertArraysEqual(letterPositions("ice cream"), { i: [ 0 ], c: [ 1, 4 ], e: [ 2, 6 ], r: [ 5 ], a: [ 7 ], m: [ 8 ] });
+
+module.exports = letterPositions;

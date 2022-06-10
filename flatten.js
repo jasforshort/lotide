@@ -25,5 +25,7 @@ const flatten = function(array1) {
   return flatArray;
 };
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
-assertArraysEqual(flatten(["spagetti", ["ice", 4, "potato"], 2, [3, 4], "coffee", [6]]), ["spagetti", "ice", 4, "potato", 2, 3, 4, "coffee", 6]);
+// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+// assertArraysEqual(flatten(["spagetti", ["ice", 4, "potato"], 2, [3, 4], "coffee", [6]]), ["spagetti", "ice", 4, "potato", 2, 3, 4, "coffee", 6]);
+
+module.exports = flatten;

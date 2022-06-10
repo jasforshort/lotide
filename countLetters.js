@@ -20,8 +20,10 @@ const countLetters = function(sentenceInput) {
   return numOfLetters;
 };
 
-const result = countLetters("lighthouse in the house");
+// const result = countLetters("lighthouse in the house");
 
-assertEqual(result["l"], 1);
-assertEqual(result["i"], 2);
-console.log(countLetters("lighthouse in the house"));
+// assertEqual(result["l"], 1);
+// assertEqual(result["i"], 2);
+// console.log(countLetters("lighthouse in the house"));
+
+module.exports = countLetters;
