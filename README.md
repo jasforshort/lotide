@@ -33,10 +33,14 @@ The following functions are currently implemented:
 * countOnly: Function that takes an item and returns counts for a specific subset of those items
 * eqArrays: Function that compares two arrays
 * eqObjects: Function that compares two objects
+* findKey: Function that scans an object and returns the first key through a callback that is a truthy value
 * findKeyByValue: Function that scans an object and returns the first key with the value, otherwise returns undefined
 * flatten: Function that takes in an array, including nested arrays, and returns a flattened array
 * head: Function that returns the first element from the array
+* index: Lists all the available functions in an object
 * letterPositions: Function that returns all the indices in the string for each specific character
+* map: Function that returns a new array based on an function passed as a parameter
 * middle: Function that returns the middle element(s) of an array
 * tail: Function that returns every value of an array but the head
+* takeUntil: Function that returns a slice of the array with the starting elements
 * without: Function that returns an array, having removed unwanted elements
